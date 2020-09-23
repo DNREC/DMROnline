@@ -1,0 +1,18 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/CLF/CLF.master" AutoEventWireup="false" CodeBehind="CLFNested.master.vb" Inherits="DMROnline.CLFNested" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder ID="NestedContentPlaceHolderHeader" runat="server">
+        <div id="siteTitle" class="row">
+            <asp:HyperLink ID="hlDMROnlineSite" runat="server" CssClass="col-md-7" >DMR Online</asp:HyperLink>
+            <asp:Label ID="Label1" runat="server" CssClass="col-md-5" Text="Need Help with your DMR submission? Phone 302-739-9946"></asp:Label>
+        </div>
+        <table style="width:100%">
+            <tr>
+                <td class="goldBar" colspan="3">
+                    <img src="CLF/private/images/spacer.gif" width="30" height="1" alt="" border="0"></td>
+            </tr>
+        </table>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{99F53F3B-B7E4-4589-8F6F-390E47E971D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DMROnline</RootNamespace>
+    <AssemblyName>DMROnline</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DMROnline.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DMROnline.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CLF\css\bootstrap.min.css" />
+    <Content Include="CLF\css\eme.css" />
+    <Content Include="CLF\css\fdatepicker.min.css" />
+    <Content Include="CLF\css\funnelback.autocompletion-2.6.0.css" />
+    <Content Include="CLF\css\funnelback.css" />
+    <Content Include="CLF\css\gic-category-subscription.css" />
+    <Content Include="CLF\css\jquery-ui.min.css" />
+    <Content Include="CLF\css\jquery.autocomplete.css" />
+    <Content Include="CLF\css\jquery.ui.css" />
+    <Content Include="CLF\css\leaflet.css" />
+    <Content Include="CLF\css\ReadSpeaker.Styles-Button.css" />
+    <Content Include="CLF\css\select2.min.css" />
+    <Content Include="CLF\css\style.css" />
+    <Content Include="CLF\css\style.min.css" />
+    <Content Include="CLF\css\theme.min.css" />
+    <Content Include="CLF\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CLF\img\android-icon-192x192.png" />
+    <Content Include="CLF\img\apple-icon-114x114.png" />
+    <Content Include="CLF\img\apple-icon-120x120.png" />
+    <Content Include="CLF\img\apple-icon-144x144.png" />
+    <Content Include="CLF\img\apple-icon-152x152.png" />
+    <Content Include="CLF\img\apple-icon-180x180.png" />
+    <Content Include="CLF\img\apple-icon-57x57.png" />
+    <Content Include="CLF\img\apple-icon-60x60.png" />
+    <Content Include="CLF\img\apple-icon-72x72.png" />
+    <Content Include="CLF\img\apple-icon-76x76.png" />
+    <Content Include="CLF\img\delaware_global_d%402x.png" />
+    <Content Include="CLF\img\delaware_global_d_blue%402x.png" />
+    <Content Include="CLF\img\delaware_global_text%402x.png" />
+    <Content Include="CLF\img\delaware_global_text_blue%402x.png" />
+    <Content Include="CLF\img\dnrec-logo.png" />
+    <Content Include="CLF\img\dnrec-midpage-logo.png" />
+    <Content Include="CLF\img\favicon-16x16.png" />
+    <Content Include="CLF\img\favicon-32x32.png" />
+    <Content Include="CLF\img\favicon-96x96.png" />
+    <Content Include="CLF\img\gic_portal_footer_logo%402x.png" />
+    <Content Include="CLF\img\portal_footer_seal.png" />
+    <Content Include="CLF\js\agency.js" />
+    <Content Include="CLF\js\all.js" />
+    <Content Include="CLF\js\axios.js" />
+    <Content Include="CLF\js\bootstrap.min.js" />
+    <Content Include="CLF\js\browser.min.js" />
+    <Content Include="CLF\js\button.min.js" />
+    <Content Include="CLF\js\core.min.js" />
+    <Content Include="CLF\js\dialog.min.js" />
+    <Content Include="CLF\js\draggable.min.js" />
+    <Content Include="CLF\js\eme.js" />
+    <Content Include="CLF\js\fdatepicker.min.js" />
+    <Content Include="CLF\js\funnelback.autocompletion-2.6.0.js" />
+    <Content Include="CLF\js\funnelbackConfig.js" />
+    <Content Include="CLF\js\handlebars-4.0.5.min.js" />
+    <Content Include="CLF\js\jquery-migrate.min.js" />
+    <Content Include="CLF\js\jquery.js" />
+    <Content Include="CLF\js\moment.min.js" />
+    <Content Include="CLF\js\mouse.min.js" />
+    <Content Include="CLF\js\position.min.js" />
+    <Content Include="CLF\js\react-dom.min.js" />
+    <Content Include="CLF\js\react.min.js" />
+    <Content Include="CLF\js\resizable.min.js" />
+    <Content Include="CLF\js\scripts.js" />
+    <Content Include="CLF\js\select2.min.js" />
+    <Content Include="CLF\js\settings.js" />
+    <Content Include="CLF\js\typeahead.bundle-0.11.1.min.js" />
+    <Content Include="CLF\js\v4-shims.js" />
+    <Content Include="CLF\js\webReader.js" />
+    <Content Include="CLF\js\widget.min.js" />
+    <Content Include="CLF\js\wp-embed.min.js" />
+    <Content Include="CLF\js\wp-polyfill-fetch.min.js" />
+    <Content Include="CLF\js\wp-polyfill.min.js" />
+    <Content Include="CLFNested.master" />
+    <Content Include="CLF\fonts\futura-t-medium.ttf" />
+    <Content Include="CLF\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CLF\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CLF\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="CLF\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="CLF\fonts\montserrat-black-webfont.woff" />
+    <Content Include="CLF\fonts\montserrat-black-webfont.woff2" />
+    <Content Include="CLF\fonts\montserrat-bold-webfont.woff" />
+    <Content Include="CLF\fonts\montserrat-bold-webfont.woff2" />
+    <Content Include="CLF\fonts\montserrat-hairline-webfont.woff" />
+    <Content Include="CLF\fonts\montserrat-light-webfont.woff" />
+    <Content Include="CLF\fonts\montserrat-light-webfont.woff2" />
+    <Content Include="CLF\fonts\montserrat-regular-webfont %281%29.woff2" />
+    <Content Include="CLF\fonts\montserrat-regular-webfont.woff" />
+    <Content Include="CLF\fonts\montserrat-regular-webfont.woff2" />
+    <Content Include="CLF\img\manifest.json" />
+    <None Include="Connected Services\DMZReports\configuration91.svcinfo" />
+    <None Include="Connected Services\DMZReports\configuration.svcinfo" />
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.DocumentMapNode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ExecutionHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ExecutionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ExecutionInfo2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.Extension.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.FindStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.GetDocumentMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.GetExecutionInfo2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.GetExecutionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.GetRenderResourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ListRenderingExtensionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ListSecureMethodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadDrillthroughTarget2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadDrillthroughTargetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadReport2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadReportDefinition2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadReportDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LoadReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LogoffResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.LogonUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.NavigateBookmarkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.NavigateDocumentMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.Render2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.RenderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.RenderStreamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ResetExecution2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ResetExecutionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ServerInfoHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.SetExecutionCredentials2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.SetExecutionCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.SetExecutionParameters2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.SetExecutionParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.Sort2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.SortResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.ToggleItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DMZReports\DMROnline.DMZReports.Warning.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DMZReports\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.AddUpdateProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.AuthenticateTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ChangeStatus_ExpireResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ChangeStatus_RejectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ChangeStatus_RepudiateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.CheckFileHashResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.DocumentStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.GetAdminDeptDetailsByReportIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.GetAdminGroupEmailByReportIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.GetFileSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ReturnUserInfoByUserIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ReturnUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.ReturnUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.SaveFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.SubmitDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\wsCROMTOM\DMROnline.wsCROMTOM.UploadDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DMZReports\ReportExecution2005.wsdl" />
+    <None Include="Connected Services\wsCROMTOM\configuration91.svcinfo" />
+    <None Include="Connected Services\wsCROMTOM\configuration.svcinfo" />
+    <None Include="Connected Services\wsCROMTOM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Connected Services\wsCROMTOM\wsCROMTOM1.disco" />
+    <Content Include="Default.aspx" />
+    <Content Include="frmDMREntry.aspx" />
+    <Content Include="frmErrorPage.aspx" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="frmMainPage.aspx" />
+    <Content Include="frmRedirect.aspx" />
+    <Content Include="frmWelcome.aspx" />
+    <Content Include="images\Cancel.gif" />
+    <Content Include="images\CancelYellow.gif" />
+    <Content Include="images\delaware.gif" />
+    <Content Include="images\Delete.gif" />
+    <Content Include="images\DeleteRed.gif" />
+    <Content Include="images\DMRPurple.gif" />
+    <Content Include="images\Edit.gif" />
+    <Content Include="images\EditGreen.gif" />
+    <Content Include="images\go.gif" />
+    <Content Include="images\GoIBlue.gif" />
+    <Content Include="images\GoPBlue.gif" />
+    <Content Include="images\GoTBlue.gif" />
+    <Content Include="images\LimitGreen.gif" />
+    <Content Include="images\NewRecord.gif" />
+    <Content Include="images\NewRecordBlue.gif" />
+    <Content Include="images\noloc.gif" />
+    <Content Include="images\NoLoc2.gif" />
+    <Content Include="images\OutfallBlack.gif" />
+    <Content Include="images\OutfallGray.gif" />
+    <Content Include="images\PDF.png" />
+    <Content Include="images\PermitBlue.gif" />
+    <Content Include="images\select_15.gif" />
+    <Content Include="images\star.gif" />
+    <Content Include="images\Template24x16.bmp" />
+    <Content Include="images\Update.gif" />
+    <Content Include="images\vectordnreclogotransparent.gif" />
+    <Content Include="images\waternewlogoweb.jpg" />
+    <Content Include="Web.config" />
+    <None Include="Connected Services\wsCROMTOM\wsCROMTOM1.wsdl" />
+    <None Include="My Project\PublishProfiles\Deploy2Dev.pubxml" />
+    <None Include="My Project\PublishProfiles\Deploy2ProdFTP.pubxml" />
+    <None Include="My Project\PublishProfiles\Deploy2Test.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLFNested.master.designer.vb">
+      <DependentUpon>CLFNested.master</DependentUpon>
+    </Compile>
+    <Compile Include="CLFNested.master.vb">
+      <DependentUpon>CLFNested.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CLF\CLF.master.designer.vb">
+      <DependentUpon>CLF.master</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\DMZReports\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\wsCROMTOM\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDMREntry.aspx.designer.vb">
+      <DependentUpon>frmDMREntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmErrorPage.aspx.designer.vb">
+      <DependentUpon>frmErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainPage.aspx.designer.vb">
+      <DependentUpon>frmMainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedirect.aspx.designer.vb">
+      <DependentUpon>frmRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmWelcome.aspx.designer.vb">
+      <DependentUpon>frmWelcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\clsBldAppMessages.vb" />
+    <Compile Include="App_Code\clsDataAccess.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\clsDMR.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\clsDMRLogin.vb" />
+    <Compile Include="App_Code\clsDNRECApps.vb" />
+    <Compile Include="App_Code\clsPermit.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\clsProgInterest.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\clsUnit.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\CROMERREventArgs.vb" />
+    <Compile Include="App_Code\CROMERRExchange.vb" />
+    <Compile Include="CLF\CLF.master.vb">
+      <DependentUpon>CLF.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDMREntry.aspx.vb">
+      <DependentUpon>frmDMREntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmErrorPage.aspx.vb">
+      <DependentUpon>frmErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMainPage.aspx.vb">
+      <DependentUpon>frmMainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRedirect.aspx.vb">
+      <DependentUpon>frmRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmWelcome.aspx.vb">
+      <DependentUpon>frmWelcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CLF\CLF.master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="ViewReport.ashx" />
+    <Content Include="ViewReportSSO.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DMZReports\" />
+    <WCFMetadataStorage Include="Connected Services\wsCROMTOM\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DMROnline.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>DMROnline.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57982</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57982/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
